@@ -1,23 +1,25 @@
 let moves = 0;
-let rows, cols, table, movesDisplayed, arrayBoard, duration;
+let rows, cols, table, movesDisplayed, arrayBoard, time;
 
 function createBoard() {
     document.querySelector('body').insertAdjacentHTML('afterbegin', '<div class="wrapper"></div>');
     document.querySelector('.wrapper').insertAdjacentHTML('afterbegin', '<table id="gem-table"></table>');
     document.querySelector('table').insertAdjacentHTML('afterend', '<input type="button" id="start-game" value="Start">');
-    document.querySelector('#start-game').insertAdjacentHTML('afterend', '<div class="stats-container"></div>');
+    document.querySelector('#start-game').insertAdjacentHTML('afterend', '<input type="button" id="end-game" value="Stop">');
+    document.querySelector('#end-game').insertAdjacentHTML('afterend', '<div class="stats-container"></div>');
     document.querySelector('.stats-container').insertAdjacentHTML('afterbegin', '<label id="label-rows">Rows <input type="text" id="rows" value="4" size="2"></label>');
     document.querySelector('#label-rows').insertAdjacentHTML('afterend', '<label id="label-cols">Columns <input type="text" id="cols" value="4" size="2"></label>');
     document.querySelector('#label-cols').insertAdjacentHTML('afterend', '<span id="moves-container">Moves <span id="moves">0</span></span>');
-    document.querySelector('#moves-container').insertAdjacentHTML('afterend', '<span id="time">Duration <label id="min">00</label>:<label id="sec">00</label></span>');
+    document.querySelector('#moves-container').insertAdjacentHTML('afterend', '<span id="time">Time: <label id="min">00</label>:<label id="sec">00</label></span>');
     document.querySelector('#time').insertAdjacentHTML('afterend', 
     '<div id="comment" >You can choose the size of the board by entering the number of <strong>rows</strong> and <strong>columns</strong> in the corresponding fields and start the game by pressing <strong>Start</strong>.</div>');
    
     let startButton = document.querySelector('#start-game');
+    let endButton = document.querySelector('#end-game');
     startButton.addEventListener('click', startGame);
     startButton.addEventListener('click', startTimer);
+    endButton.addEventListener('click', myStopFunction);
     movesDisplayed = document.querySelector('#moves');
-    duration = document.querySelector('#duration');
     table = document.querySelector('#gem-table');
     rows = 4;
     cols = 4;
@@ -167,7 +169,7 @@ function startTimer() {
     minLabel = document.querySelector("#min");
     secLabel = document.querySelector("#sec");
     let totalSec = 0;
-    setInterval(setTime, 1000);
+    time = setInterval(setTime, 1000);
 
     function setTime()
     {
@@ -190,6 +192,9 @@ function startTimer() {
     }
  }
 
+ function myStopFunction() {
+    clearTimeout(time);
+  }
 
 window.addEventListener('DOMContentLoaded', () => {
     createBoard();
