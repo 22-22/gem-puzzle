@@ -37,7 +37,7 @@ body {
     justify-content: center;
 }
 
-#start-game {
+#start-game, #end-game {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: navy;
     font-weight: 600;
