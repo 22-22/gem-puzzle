@@ -4,15 +4,15 @@ let rows, cols, table, movesDisplayed, arrayBoard, time;
 function createBoard() {
     document.querySelector('body').insertAdjacentHTML('afterbegin', '<div class="wrapper"></div>');
     document.querySelector('.wrapper').insertAdjacentHTML('afterbegin', '<table id="gem-table"></table>');
-    document.querySelector('table').insertAdjacentHTML('afterend', '<input type="button" id="start-game" value="Start">');
-    document.querySelector('#start-game').insertAdjacentHTML('afterend', '<input type="button" id="end-game" value="Stop">');
+    document.querySelector('table').insertAdjacentHTML('afterend', '<input type="button" id="start-game" value="Start Game & Timer">');
+    document.querySelector('#start-game').insertAdjacentHTML('afterend', '<input type="button" id="end-game" value="Stop Timer">');
     document.querySelector('#end-game').insertAdjacentHTML('afterend', '<div class="stats-container"></div>');
     document.querySelector('.stats-container').insertAdjacentHTML('afterbegin', '<label id="label-rows">Rows <input type="text" id="rows" value="4" size="2"></label>');
     document.querySelector('#label-rows').insertAdjacentHTML('afterend', '<label id="label-cols">Columns <input type="text" id="cols" value="4" size="2"></label>');
     document.querySelector('#label-cols').insertAdjacentHTML('afterend', '<span id="moves-container">Moves <span id="moves">0</span></span>');
     document.querySelector('#moves-container').insertAdjacentHTML('afterend', '<span id="time">Time: <label id="min">00</label>:<label id="sec">00</label></span>');
     document.querySelector('#time').insertAdjacentHTML('afterend', 
-    '<div id="comment" >You can choose the size of the board by entering the number of <strong>rows</strong> and <strong>columns</strong> in the corresponding fields and start the game by pressing <strong>Start</strong>.</div>');
+    '<div id="comment" >You can choose the size of the board by entering the number of <strong>rows</strong> and <strong>columns</strong> in the corresponding fields and start the game by pressing <strong>Start Game & Timer</strong>. Please click on <strong>Stop Timer</strong> to reset the timer. Thank you!</div>');
    
     let startButton = document.querySelector('#start-game');
     let endButton = document.querySelector('#end-game');
