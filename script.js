@@ -97,7 +97,8 @@ function moveSquare(rowsTable, colsTable) {
         alert("Square should be next to the blank space.");
     }
     if (checkIfWinner()) {
-        alert(`Congrats, the puzzle is solved in ${moves} moves!`);
+        alert(`Congrats, the puzzle is solved in ${moves} moves and
+         ${document.querySelector("#min").innerHTML}min ${document.querySelector("#sec").innerHTML}sec!`);
         startGame();
     }
 }
@@ -140,8 +141,7 @@ function checkIfWinner() {
             count++;
         }
     }
-    document.querySelector("#min").innerHTML = "00";
-    document.querySelector("#sec").innerHTML = "00";
+    myStopFunction();
     return true;
 }
 
@@ -156,7 +156,6 @@ document.addEventListener('mousedown', (event) => {
     if (event.target.classList.contains('square')) {
         event.target.classList.add('active');
     }
-   
 })
 
 document.addEventListener('mouseup', (event) => {
@@ -191,13 +190,11 @@ function startTimer() {
             return valueStr;
         }
     }
-
-    function myStopFunction() {
-        clearInterval(time);
-      }
-    
  }
 
+ function myStopFunction() {
+    clearInterval(time);
+  }
  
 window.addEventListener('DOMContentLoaded', () => {
     createBoard();
