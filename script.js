@@ -12,7 +12,7 @@ function createBoard() {
     document.querySelector('#label-cols').insertAdjacentHTML('afterend', '<span id="moves-container">Moves <span id="moves">0</span></span>');
     document.querySelector('#moves-container').insertAdjacentHTML('afterend', '<span id="time">Time: <label id="min">00</label>:<label id="sec">00</label></span>');
     document.querySelector('#time').insertAdjacentHTML('afterend', 
-    '<div id="comment" >You can choose the size of the board by entering the number of <strong>rows</strong> and <strong>columns</strong> in the corresponding fields and start the game by pressing <strong>Start Game & Timer</strong>. Please click on <strong>Stop Timer</strong> to reset the timer. Thank you!</div>');
+    '<div id="comment" >You can choose the size of the board by entering the number of <strong>rows</strong> and <strong>columns</strong> in the corresponding fields and start the game by pressing <strong>Start Game & Timer</strong>. Please click on <strong>Stop Timer</strong> to stop the timer. Thank you!</div>');
    
     let startButton = document.querySelector('#start-game');
     let endButton = document.querySelector('#end-game');
