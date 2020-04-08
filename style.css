@@ -11,8 +11,7 @@ body {
 #gem-table {
     padding: 20px;
     margin: auto;
-    
-    
+    transition: all 1s ease;  
 }
 
 .square {
@@ -23,8 +22,7 @@ body {
     cursor: pointer;
     text-align: center;
     color: navy;
-    
-    
+    transition: all 1s ease;     
 }
 
 .empty {
@@ -42,7 +40,7 @@ body {
     justify-content: center;
 }
 
-#start-game, #end-game {
+#start-game {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: navy;
     font-weight: 600;
