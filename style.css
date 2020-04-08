@@ -11,6 +11,8 @@ body {
 #gem-table {
     padding: 20px;
     margin: auto;
+    
+    
 }
 
 .square {
@@ -21,12 +23,15 @@ body {
     cursor: pointer;
     text-align: center;
     color: navy;
+    
+    
 }
 
 .empty {
     width: 55px;
     height: 55px;
     text-align: center;
+    
 }
 
 .stats-container {
@@ -41,7 +46,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: navy;
     font-weight: 600;
-    width: 100px;
+    width: 200px;
     height: 40px;
     border-radius: 3px;
     background-color: lightblue;
@@ -75,11 +80,14 @@ body {
     background-color: lightblue;
     padding: 10px;
     border: 1px solid navy;
+    max-width: 800px;
+    text-align: center;
 }
 
 .active {
-    background-color: rgb(229, 255, 0);
+    background-color: red;
     border-radius: 20px;
-    transition: all .2s;
-    box-shadow: 0 0 50px rgba(229, 255, 0);
+    transition: all 0.5s ease;  
+    box-shadow: 0 0 50px red;
 }
+
